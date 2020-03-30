@@ -5,14 +5,7 @@ performance of an NVMe drive. When combined with IO Buster Coordinator, multiple
 NVMe drives can be characterized concurrently.
 
 IO Buster leverages the Storage Performance Development Kit
-(SPDK(http://www.spdk.io/)).
-
-All scripts available in this repository are licensed under GPLv3.
-
-IO Buster, which is avilable as a form a binary, is available for free under a
-proprietry license as long as it's not sold or used for profit. A user is
-expected to accept the license agreement to use IO Buster when launching for the
-first time.
+([SPDK](http://www.spdk.io/)) to generate high speed IO traffics to NVMe drives.
 
 ## Supported Platform
 
@@ -72,14 +65,15 @@ Linux Distribution.
 Additionally `grub` configuration needs updates to support 1GB hugepages.
 Read the instructions from the [DPDK documentation](https://rb.gy/gu7jpd).
 
-## IO Buster Commands
+## Documentation
 
-TO DO
+See [IO Buster Documentation](https://qamaestro.github.io/io-buster/) page.
 
-## IO Buster APIs
+## License
 
-TO DO
+All scripts available in this repository are licensed under GPLv3.
 
-## IO Buster Coordinator Commands
-
-TO DO
+IO Buster, which is avilable as a form a binary, is available for free under a
+proprietry license as long as it's not sold or used for profit. A user is
+expected to accept the license agreement to use IO Buster when launching for the
+first time.
