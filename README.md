@@ -44,7 +44,8 @@ runs on the following platforms:
     - Windows
     - Mac OS
     - Linux
-Please use a correct binary based on your platform.
+
+    Please use a correct binary based on your platform.
 
 1. Install IO Buster Coordinator.
 
@@ -52,14 +53,14 @@ Please use a correct binary based on your platform.
     iobc install
     ```
 
-1. Start IO Buster Coordinator.
+2. Start IO Buster Coordinator.
    
    ```bash
    iobc run
    ```
 
-1. On `coordinator >>> ` prompt, run `host add` command to add a host where
-**io-buster** will be installed.
+3. On the coordinator prompt (**coordinator >>>**), run `host add` command to 
+add a host where **io-buster** will be installed. 
 
 ### Install Manually
 
