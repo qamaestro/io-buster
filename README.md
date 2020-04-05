@@ -1,3 +1,5 @@
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 # IO Buster
 
 IO Buster provides a flexible test framework, which allows characterizing
