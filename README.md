@@ -30,13 +30,36 @@ IO Buster Coordinator runs on any platform with Docker installed.
 
 #### Installation Steps
 
+1. Clone this repository using Git.
+
+    ```bash
+    git clone https://github.com/qamaestro/io-buster.git
+    cd io-buster
+    ```
+
 1. Install [Docker](https://docs.docker.com/install/).
 
-1. Depending on your host operating system, run either run.bat (Windows) or
-run.sh (Mac OS or Linux).
+1. The IO Buster Coordinator is located at `/bin`. Currently, the Coordinator
+runs on the following platforms:
+    - Windows
+    - Mac OS
+    - Linux
+Please use a correct binary based on your platform.
 
-1. Read `host add` command from **IO Buster Coordinator Commands** for
-instructions of adding a new host.
+1. Install IO Buster Coordinator.
+
+    ```bash
+    iobc install
+    ```
+
+1. Start IO Buster Coordinator.
+   
+   ```bash
+   iobc run
+   ```
+
+1. On `coordinator >>> ` prompt, run `host add` command to add a host where
+**io-buster** will be installed.
 
 ### Install Manually
 
