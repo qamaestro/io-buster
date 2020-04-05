@@ -41,8 +41,9 @@ IO Buster Coordinator runs on any platform with Docker installed.
 
 1. Install [Docker](https://docs.docker.com/install/).
 
-1. The IO Buster Coordinator is located at `/bin`. Currently, the Coordinator
-runs on the following platforms:
+1. The IO Buster Coordinator is located at `/bin/coordinator`. Currently, the 
+Coordinator runs on the following platforms:
+
     - Windows
     - Mac OS
     - Linux

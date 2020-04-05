@@ -1,9 +1,0 @@
-{
-  "name": "qamaestr-coordinator-bin",
-  "version": "1.0.0",
-  "description": "qamaestro container wrapper",
-  "main": "index.js",
-  "dependencies": {
-    "fs-extra": "^8.1.0"
-  }
-}
