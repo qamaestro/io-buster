@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Tutorial: Installing IO Buster - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,77 +32,104 @@
 
 <div id="main">
     
-
+    <h1 class="page-title">Tutorial: Installing IO Buster</h1>
     
 
+    <section>
 
-
+<header>
     
 
+    <h2>Installing IO Buster</h2>
+</header>
 
-    <section class="package">
-        <h3> </h3>		
-    </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    <section class="readme usertext">
-        <article><style>
-h1, h2 {
-    font-family: 'Montserrat', sans-serif !important;
+<article>
+    <style>
+.page-title {
+    display: none;
 }
-h1 {
-    font-size: 48px !important;
-    font-weight: 300 !important;
-    margin: 1em 0 .5em !important;
+header {
+    display: none;
 }
-h2 {
-    font-size: 24px !important;
-    margin: 1.5em 0 .3em !important;
-}
-p {
-    margin-bottom: 1em !important;
-    line-height: 160% !important;
-    font-size: 16px !important;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif !important;
+h3 {
+    font-size: 20px;
 }
 </style>
-<h1>IO Buster</h1>
-<p>IO Buster provides a flexible test framework, which allows characterizing
-performance of an NVMe drive. When combined with IO Buster Coordinator, multiple
-NVMe drives can be characterized concurrently.</p>
-<p>IO Buster leverages the Storage Performance Development Kit
-(<a href="http://www.spdk.io/">SPDK</a>) to generate high speed IO traffics to NVMe drives.</p>
-<h2>Supported Platform</h2>
-<p>IO Buster is designed to work on any Linux distribution with glibc &gt;= 2.7 and
-kernel version &gt;= 3.16.</p>
-<p>We only officially tested IO Buster on the following Linux distributions:</p>
+<h1>Installing IO Buster</h1>
+<p>We highly recommend installing IO Buster using IO Buster Coordinator. IO Buster
+Coordinator sets up all necessary package dependencies and linux configurations.</p>
+<h2>Install IO Buster Using IO Buster Coordinator</h2>
+<p>When using IO Buster coordinator, a user needs an extra system on top of a
+system that will run IO Buster.</p>
+<p>IO Buster Coordinator runs on any platform with Docker installed.</p>
+<h3>Installation Steps</h3>
+<ol>
+<li>
+<p>Clone this repository using Git.</p>
+<pre class="prettyprint source lang-bash"><code>git clone https://github.com/qamaestro/io-buster.git
+cd io-buster
+</code></pre>
+</li>
+<li>
+<p>Install <a href="https://docs.docker.com/install/">Docker</a>.</p>
+</li>
+<li>
+<p>The IO Buster Coordinator is located at <code>/bin/coordinator</code>. Currently, the
+Coordinator runs on the following platforms:</p>
 <ul>
-<li>Ubuntu 18.04 LTS</li>
-<li>CentOS 7</li>
+<li>Windows</li>
+<li>Mac OS</li>
+<li>Linux</li>
 </ul>
-<h2>License</h2>
-<p>All scripts available in the GitHub repository are licensed under GPLv3.</p>
-<p>IO Buster, which is avilable as a pre-compiled binary, is available for free
-under a proprietry license as long as it's not sold or used for profit. A user
-is expected to accept the license agreement when launching IO Buster for the
-first time.</p></article>
-    </section>
+<p>Please use a correct binary based on your platform.</p>
+</li>
+<li>
+<p>Install IO Buster Coordinator.</p>
+<pre class="prettyprint source lang-bash"><code>iobc install
+</code></pre>
+</li>
+<li>
+<p>Start IO Buster Coordinator.</p>
+<pre class="prettyprint source lang-bash"><code>iobc run
+</code></pre>
+</li>
+<li>
+<p>On the coordinator prompt (<strong>coordinator &gt;&gt;&gt;</strong>), run <code>host add</code> command to
+add a host where <strong>io-buster</strong> will be installed.</p>
+</li>
+</ol>
+<h2>Install IO Buster Manually</h2>
+<h3>Install Packages</h3>
+<p>When installing IO Buster manually, package dependencies must be installed
+manually. The followings are the list of packages that need to install on each
+Linux Distribution.</p>
+<h4>Ubuntu 18.04 LTS</h4>
+<ul>
+<li>lshw</li>
+<li>pciutils</li>
+<li>libaio-dev</li>
+<li>libnuma-dev</li>
+<li>libssl-dev</li>
+<li>uuid-dev</li>
+</ul>
+<h4>CentOS 7</h4>
+<ul>
+<li>lshw</li>
+<li>pciutils</li>
+<li>libaio-devel</li>
+<li>libuuid-devel</li>
+<li>numactl-devel</li>
+<li>openssl-devel</li>
+</ul>
+<p>Additionally <code>grub</code> configuration needs updates to support 1GB hugepages.
+Read the instructions from the <a href="https://rb.gy/gu7jpd">DPDK documentation</a>.</p>
+<h3>Download IO Buster</h3>
+<p>...</p>
+<h3>Install IO Buster</h3>
+<p>...</p>
+</article>
 
-
-
-
-
+</section>
 
     
     
