@@ -15,9 +15,9 @@ See [IO Buster Documentation](https://qamaestro.github.io/io-buster/) page.
 
 ## License
 
-All scripts available in this repository are licensed under GPLv3.
+All scripts available in the GitHub repository are licensed under GPLv3.
 
-IO Buster, which is avilable as a form a binary, is available for free under a
-proprietry license as long as it's not sold or used for profit. A user is
-expected to accept the license agreement when launching IO Buster for the
+IO Buster, which is available as a pre-compiled binary, is free 
+under a proprietry license as long as it's not sold or used for profit. A user 
+is expected to accept the license agreement when launching IO Buster for the
 first time.
