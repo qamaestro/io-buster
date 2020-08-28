@@ -730,6 +730,45 @@ Interface List:</p>
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>flushInterval</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>100</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>A interval for flushing serial buffer (ms).</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -945,7 +984,7 @@ serialport.pipe(index, 'serial')</code></pre>
 
     
 
-    <h4 class="name" id=".send"><span class="type-signature">(static) </span>send<span class="signature">(devIdx, message)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".send"><span class="type-signature">(static) </span>send<span class="signature">(devIdx, message, flushBeforeSend<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1018,7 +1057,11 @@ serialport.pipe(index, 'serial')</code></pre>
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -1043,7 +1086,19 @@ serialport.pipe(index, 'serial')</code></pre>
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last"><p>Serial port device index.</p></td>
@@ -1066,10 +1121,61 @@ serialport.pipe(index, 'serial')</code></pre>
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last"><p>A message to write</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>flushBeforeSend</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>true</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>To flush Rx Buffer before send.</p></td>
         </tr>
 
     
@@ -1411,7 +1517,7 @@ Supported protocols</p>
 
     
 
-    <h4 class="name" id=".sendLine"><span class="type-signature">(static) </span>sendLine<span class="signature">(devIdx, message)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".sendLine"><span class="type-signature">(static) </span>sendLine<span class="signature">(devIdx, message, flushBeforeSend<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1484,7 +1590,11 @@ Supported protocols</p>
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -1509,7 +1619,19 @@ Supported protocols</p>
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last"><p>Serial port device index.</p></td>
@@ -1532,10 +1654,61 @@ Supported protocols</p>
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last"><p>A message to write</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>flushBeforeSend</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>true</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>To flush Rx Buffer before send.</p></td>
         </tr>
 
     
@@ -1953,7 +2126,7 @@ If matched with string, it returns the pattern.</p>
             
                 <td class="default">
                 
-                    <code>true</code>
+                    <code>false</code>
                 
                 </td>
             
@@ -2035,7 +2208,7 @@ If matched with string, it returns the pattern.</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on Thu Jul 30 2020 12:22:36 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on Fri Aug 28 2020 08:57:37 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
