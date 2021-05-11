@@ -1,12 +1,12 @@
-/* global utility, sonar */
+/* global utility, activesonar */
 
-sonar.runWorkloadList = function (workloadList, checkFunction) {
+activesonar.runWorkloadList = function (workloadList, checkFunction) {
   for (let workloadIdx = 0; workloadIdx < workloadList.length; workloadIdx++) {
     if ('preDelay' in workloadList[workloadIdx]) {
       utility.sleep(workloadList[workloadIdx].preDelay * 1000)
     }
 
-    sonar.runWorkloadGenerator(workloadList[workloadIdx])
+    activesonar.runWorkloadGenerator(workloadList[workloadIdx])
 
     // TODO : checkFunction
     if (checkFunction !== undefined) {
@@ -23,7 +23,7 @@ sonar.runWorkloadList = function (workloadList, checkFunction) {
   }
 }
 
-sonar.runRetentionFramework = function (
+activesonar.runRetentionFramework = function (
   preWorkload,
   mainWorkload,
   loopCondition,
@@ -31,7 +31,7 @@ sonar.runRetentionFramework = function (
 ) {
   // TODO: Complete Me
   if (preWorkload != null) {
-    sonar.runWorkloadList(preWorkload)
+    activesonar.runWorkloadList(preWorkload)
   }
 
   for (
@@ -40,6 +40,6 @@ sonar.runRetentionFramework = function (
     retLoop += loopCondition.step
   ) {
     // workloadLib.TS_001.main[0].condition = retLoop
-    let res = sonar.runWorkloadList(mainWorkload)
+    let res = activesonar.runWorkloadList(mainWorkload)
   }
 }

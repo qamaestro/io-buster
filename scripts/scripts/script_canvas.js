@@ -1,26 +1,9 @@
-/* global importScript, sonar, workloadLib */
+/* global importScript, activesonar, workloadLib */
 
-importScript('../lib/sonar/index.js')
+importScript('../lib/activesonar/index.js')
+importScript('../lib/workload/index.js')
 
-sonar.init()
+activesonar.init();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+activesonar.runWorkloadList(workloadLib.perfProfile1.main)
 

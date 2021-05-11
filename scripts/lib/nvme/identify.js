@@ -1,11 +1,10 @@
-/* global nvme 
-   This extends existing nvme library
-*/
+/* global nvme */
 
+// This extends existing nvme library
 nvme.identify = function (cmdOpt) {
   const cmd = {}
-  cmd.opc = nvme.opcode.admin.IDENTIFY
-  cmd.nsid = cmdOpt.nsid
+  cmd.opc = 0x06
+  cmd.nsid = 0
   cmd.cdw10 = (cmdOpt.cns & 0xff) | ((cmdOpt.cntid & 0xffff) << 16)
 
   if (cmdOpt.cns === 0x4) {
@@ -26,36 +25,9 @@ nvme.identify = function (cmdOpt) {
   return readBuf
 }
 
-nvme.identifyNamespace = function (nsid) {
-  const ret = this.identify({
-    nsid:nsid,
-    cns: 0x00,
-    cntid: 0x00,
-    nvmsetid: 0x00,
-    uuid: 0x00
-  })
-  
-  const namespaceId = {}
-  namespaceId.maxLbaNumber = utils.bit.mergeBigInteger([
-    ret.readUInt32LE(0),
-    ret.readUInt32LE(4),
-  ]).toString()
-
-  //[TODO] how to get LBA size 
-  // namespaceId.lbaSize = ret.readUInt8(26)
-  namespaceId.lbaSize = 512
-  
-  namespaceId.capacity = (utils.bit.mergeBigInteger([
-    ret.readUInt32LE(8),
-    ret.readUInt32LE(12),
-  ])*BigInt(namespaceId.lbaSize)).toString()
-
-  return namespaceId
-}
-
+// This extends existing nvme library
 nvme.identifyController = function () {
   const ret = this.identify({
-    nsid:0,
     cns: 0x01,
     cntid: 0x00,
     nvmsetid: 0x00,
@@ -88,10 +60,6 @@ nvme.identifyController = function () {
   for (i = 0; i < 8; i++) {
     deviceId.fwVersion += String.fromCharCode(ret.readUInt8(64 + i)).trim()
   }
-
-  deviceId.ieeeOuiId = ret.readUInt32LE(73) & 0x00FFFFFF
-  deviceId.controllerId = ret.readUInt16LE(78)
-  deviceId.version = ret.readUInt32LE(80)
 
   return deviceId
 }
